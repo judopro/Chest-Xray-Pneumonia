@@ -28,13 +28,6 @@ num_of_classes = 2
 batch_size = 128
 target_size = (299, 299)
 
-os.environ['PYTHONHASHSEED'] = '0'
-seed=1234
-# Set the numpy seed
-np.random.seed(seed)
-# Set the random seed in tensorflow at graph level
-tf.set_random_seed(seed)
-
 print("Using Inception v3")
 base_model = InceptionV3(weights='imagenet', input_shape=(299, 299, 3), include_top=False)
 
